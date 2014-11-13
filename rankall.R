@@ -16,7 +16,7 @@ rankall <- function(outcome, num = "best") {
     ## 2 = hospital name, 7 = state
     data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
     
-    ## outcomeData[Hospital.Name, State, death rate]
+    ## outcomeData[Hospital.Name, State, outcome]
     outcomeData <- data[, c(2, 7, colOutcome)]
     colnames(outcomeData) <- c("Hospital.Name", "State", outcome)
     
